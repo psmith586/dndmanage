@@ -3,7 +3,7 @@
 class Character:
     
     def __init__(self, name, race, char_class, backgrd, align, lvl, \
-					luck, str, dex, con, intel, charis, equip):
+				 str, dex, con, intel, charis, equip):
         
 		#initialize each attribute
 		
@@ -13,7 +13,6 @@ class Character:
 		self.__backgrd = backgrd
 		self.__align = align
 		self.__lvl = lvl
-		self.__luck = luck
 		self.__str = str
 		self.__dex = dex
 		self.__con = con
@@ -35,8 +34,6 @@ class Character:
 		self.__align = align
 	def set_lvl(self, lvl):
 		self.__lvl = lvl
-	def set_luck(self, luck):
-		self.__luck = luck
 	def set_str(self, str):
 		self.__str = str
 	def set_dex(self, dex):
@@ -64,8 +61,6 @@ class Character:
 		return self.__align
 	def get_lvl(self):
 		return self.__lvl
-	def get_luck(self):
-		return self.__luck
 	def get_str(self):
 		return self.__str
 	def get_dex(self):
@@ -79,4 +74,15 @@ class Character:
 	def get_equip(self):
 		return self.__equip
 
-	
+	#display current state of the instance	
+	def __str__(self):
+		return "Name: " + self.__name + \
+				"\nRace/Class: " + self.__race + "/" + self.__char_class + \
+				"\nBackground/Alignment: " + self.__backgrd "/" + self.__align + \
+				"\nLevel: " + self.__lvl + \
+				"\nStrength: " + self.__str + \
+				"\nDexterity: " + self.__dex + \
+				"\nConstitution: " + self.__con + \
+				"\nIntelligence: " + self.__intel + \
+				"\nCharisma: " + self.__charis + \
+				"\nCurrent Equipment: " + self__equip
